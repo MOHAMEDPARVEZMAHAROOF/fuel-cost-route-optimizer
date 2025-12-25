@@ -295,3 +295,42 @@ For issues or questions, please create an issue in the repository.
 ---
 **Project Status**: ✅ Production Ready
 **Last Updated**: December 2025
+
+
+## 🚀 Getting Started - Currently Working
+
+### Project Status
+The Fuel Cost Route Optimizer API is **actively running** in GitHub Codespace with the Django development server on **port 8000**.
+
+### Server Status in GitHub Codespace
+✅ **Active Status**: Running
+- **Port**: 8000 (Listening)
+- **Process**: Python Runserver (PID: 22176)
+- **Database**: SQLite3 (db.sqlite3)
+- **Framework**: Django 4.2 + Django REST Framework 3.14
+
+### Testing the API
+
+#### Health Check Endpoint
+
+```bash
+curl http://localhost:8000/api/v1/health/
+```
+
+**Expected Response**:
+
+```json
+{"status": "healthy"}
+```
+
+### GitHub Agent Integration
+The project is integrated with GitHub Agent for automated development assistance within Codespace, including:
+- Server health monitoring and diagnostics
+- Port status checking and network diagnostics
+- Process management and monitoring
+- HTTP endpoint testing and verification
+
+### Production Deployment Notes
+- Current dev server is for testing only
+- For production use Gunicorn or uWSGI
+- Use PostgreSQL database for production

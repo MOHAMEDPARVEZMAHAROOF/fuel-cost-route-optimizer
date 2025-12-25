@@ -1,4 +1,4 @@
-Django==4.2.8
+echo 'Migration complete, now starting the server'Django==4.2.8
 DjangoRestFramework==3.14.0
 django-filter==2.5.2
 pytz==2023.3
