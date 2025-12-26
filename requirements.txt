@@ -6,8 +6,7 @@
 Django==4.2.9
 DjangoRestFramework==3.14.0
 django-cors-headers==4.3.1
-django-filter==25.2
-
+django-filter==2.4.0
 # Database & ORM
 sqlparse==0.4.4
 # psycopg2-binary==2.9.9  # PostgreSQL adapter (optional for production)
