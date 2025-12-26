@@ -24,3 +24,12 @@ class RouteOptimizationViewSet(viewsets.ModelViewSet):
         avg_cost_per_mile = round(total_cost / total_distance, 2) if total_distance > 0 else 0
         
         return Response({"total_routes": total_routes, "total_distance_miles": round(total_distance, 2), "total_fuel_cost": round(total_cost, 2), "average_cost_per_mile": avg_cost_per_mile})
+
+
+    @action(detail=False, methods=['post'])
+    def optimize(self, request):
+        serializer = RouteOptimizationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
