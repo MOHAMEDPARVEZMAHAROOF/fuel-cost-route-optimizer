@@ -46,8 +46,7 @@ pylint==3.0.3
 
 # Security
 cryptography==41.0.7
-PyJWT==2.8.1
-
+PyJWT==2.8.0
 # Monitoring & Logging
 django-extensions==3.2.3
 
